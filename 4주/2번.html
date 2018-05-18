@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title> 2번 문제 </title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#div1').click(function(){
+				$('#div1').css('backgroundColor', 'black')
+				$('#div1').css('color', 'white')
+			});
+
+			$('#div2').click(function(){
+				$(this).fadeOut(500);
+				/*$('#div2').html(function(index, html){
+					return html + '여긴div2 영역';
+				});*/
+			});
+		});
+	</script>
+
+	
+</head>
+
+<body>
+	
+	<div id="div1"></div>
+    <div id="div2"></div>
+
+
+    <script>
+	var newNode1 = document.createTextNode("여긴 div1 영역"); 
+	newNode1.id="node1";
+	var newDiv1 = document.getElementById("div1");
+	newDiv1.appendChild(newNode1);
+
+	
+	var newDiv2 = document.getElementById("div2");
+	newDiv2.innerHTML = "여긴 div2 영역";
+    
+
+    var newIMG = document.createElement('img');
+    newIMG.id="a";
+  	newIMG.src="back.jpg";
+    document.body.appendChild(newIMG);
+    newIMG.style.width = "500px";
+    newIMG.style.height = "300px";    
+  	</script>
+
+
+	
+</body>
+</html>

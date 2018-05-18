@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title> 3번 문제 </title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#img1').hide(); //default : img hidden
+			
+			$('#showBtn').click(function(){
+			$('#img1').show(1000).slideUp(1500).slideDown(1500);
+			});
+
+			$('#hideBtn').click(function(){
+			$('#img1').fadeOut(1500);
+			});
+			
+		});
+	</script>
+
+	
+</head>
+
+
+
+<body>
+	<input id="showBtn" type="button" value="Button01">
+	<input id="hideBtn" type="button" value="Button02">
+	<img id=img1 width="300" height="300" src="dog.jpg">
+</html>

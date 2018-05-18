@@ -1,0 +1,28 @@
+﻿<!DOCTYPE.html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>insert title here</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#listButton").click(function(){
+            	//인풀 태그를 통해 클릭 이벤트 실행
+                $.ajax({type:'post',
+                    url:'\list.html',
+                    dataType:'html',
+                    success:function(data){
+                        $("#listDiv").html(data);
+                    }
+                    // ajax 통신을 통해 html 파일을 받아온뒤 받는 것에 성공했을 경우 div태그에 값을 넣어준다.
+                });
+            })
+        })               
+    </script>
+</head>
+<body>
+    <input type="button" id="listButton" value="come on" />
+    <br/>
+    <div id="listDiv"></div>
+</body>
+</html>

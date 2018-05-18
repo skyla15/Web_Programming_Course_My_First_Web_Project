@@ -1,0 +1,16 @@
+﻿<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+version="2.4">
+
+<servlet>
+	<servlet-name>Ch3Select</servlet-name> // form.html으로의 요청과 일치하는 서블릿 이름
+	<servlet-class>com.example.web.BeerSelect</servlet-class> // 요청된 서블릿 클래스, 요청이 들어오면 로드시키면서 초기화시킨다.
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>Ch3Select</servlet-name> // form.html으로부터 요청된 결과값의 서블릿 이름
+	<url-pattern>/SelectBeer.do</url-pattern> // form.html으로부터 요청되는 것.
+</servlet-mapping>
+
+</web-app>

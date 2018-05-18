@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+		var xhttp;
+		function createHttpRequest(){
+			xhttp = new XMLHttpRequest();
+		}
+
+		function mySend(){
+			createHttpRequest();
+			xhttp.onreadystatechange=callFunction;
+			xhttp.open("GET", "json.json", true);
+			xhttp.send(null);
+		}
+		/* callfunction을 통해 서버 처리상태를 받아오고 그것에 따라
+		 이벤트 상태값을 설정함. 이후 json 파일을 받아오고 서버에 반환값을 없음.
+		*/
+
+
+		function callFunction(){
+			if(xhttp.readyState == 4){ //서버처리 끝
+				if(xhttp.readyState == 200){ //서버처리 성공
+					var responseData = xhttp.responseText; 
+					//XML형태로 받은 데이터 값을 텍스트형태로 받아온 뒤 div태그에 이 값을 innerHTML로 넣어준다.
+
+					var jsonObject = eval('(' + responseDate + ')'); //받아온 제이슨파일을 eval함수를 통해 분리.
+					var name = jsonObject.username; //각각의 json 파일의 목록들을 각각의 변수에 저장한다.
+					var age = jsonObject.age;
+					var address = jsonObject.address;
+					document.getElementById("result").innerHTML = name + "\t" + age + "\t" + address; //저장된 값들을 div태그로 출력
+				}
+			}
+		}
+	</script>
+</head>
+<body>
+	json 텍스트 파일 실습입니다. <br/>
+	<button onClick="mySend()"> 파일 수신 </button>
+	<div id="result"></div>
+</body>
+</html>

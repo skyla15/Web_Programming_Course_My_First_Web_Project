@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+<title>과제4번</title>
+
+</style>
+<script>
+function addTextNode(text) {
+  var newtext = document.createTextNode(text),
+  p2 = document.getElementById("p2");
+  p2.appendChild(newtext);
+}
+
+function change(){
+  var newA = document.getElementById("p1");
+  
+  newA.setAttribute("style", "background-color:black"); 
+  newA.style.color = "white";
+  newA.style.width="800px";
+ //be wary as this will erase any changes you have made to the style object.
+
+}
+</script>
+</head>
+
+<body>
+
+  <div id="p1" onclick="change()">여긴 DIV1 영역</div>
+  <div id="p2" onclick="addTextNode('div2의 영역이죠')";>여긴 DIV2 영역</div>
+
+    <script type="text/javascript">
+    var newIMG = document.createElement('img');
+    newIMG.id="a";
+  	newIMG.src="back.jpg";
+    document.body.appendChild(newIMG);
+    newIMG.style.width = "800px";
+    newIMG.style.height = "400px";    
+  	</script>
+
+
+  <!-- 남은 영역(그림) createElement('img') 로 삽입 -->
+</body>
+</html>

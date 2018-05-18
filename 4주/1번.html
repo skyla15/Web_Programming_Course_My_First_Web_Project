@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title> 1번 문제 </title>
+
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+	<script>
+
+		$(document).ready(function(){
+			$('.box').css('width',100);
+			$('.box').css('height', 100);
+			$('.box').css('backgroundColor', 'blue');
+		});
+	
+
+		$(function(){
+			
+			var wid=100;
+			
+
+			$('.widn').click(function(){
+				wid=wid*1.1;
+				$('.box').css('width', wid);
+			});
+
+			$('.shrnk').click(function(){
+				wid=wid*0.9;
+				$('.box').css('width', wid);
+			});
+		});
+	</script>
+
+
+
+		
+
+</head>
+
+<body>
+
+	<div class="box"> </div>
+	<input class="widn" type="button" value="상자 확대">
+	<input class="shrnk" type="button" value="상자 축소">
+</body>
+
+		
+</html>

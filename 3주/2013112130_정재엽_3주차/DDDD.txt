@@ -1,0 +1,9 @@
+dragstart : 드래그 작업 시작
+drag : 드래그 작업 시 발생(mousemove)
+dreagend : 드래그 끝
+
+== 타겟 요소에서 실행 ==
+dragenter : 마우스가 드래그 작업 중 타겟 요소의 영역에 들어가면 실행
+dragover : drag와 비슷함
+drop : 드래그 작업 중 드롭이 일어났을 때 타겟에서 발생
+dragleave : 작업 중 드래그 작업 끝 후에 발생 // dragenter와 함께 사용

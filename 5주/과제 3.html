@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset ="UTF-8">
+	<title></title>
+	<script type="text/javascript">
+		var xhttp;
+		function createHttpRequest(){
+			xhttp = new XMLHttpRequest();
+		}
+
+		function mySend() {
+			createHttpRequest(); //createHttpRequst함수 호출을 통해 xhttp 객체를 생성한다.
+			xhttp.onreadystatechange = callFunction; //callfunction을 통해 서버 처리 상태에 따른 이벤트 값을 받아온다.
+			xhttp.open("GET", "sample.txt", true); // 서버처리 후 sample.txt를 가져온다. true는 기본값
+			xhttp.send(null); // 서버에 값을 반환은 하지않는다.
+		}
+		
+
+
+		function callFunction(){
+			if(xhttp.readyState == 4){ // 서버처리 끝
+				if(xhttp.status == 200){ // 서버처리 성공
+					var responseData == xhttp.responseText;
+					document.getElementById("result").innerHTML = responseData;
+					//XML형태로 받은 데이터 값을 텍스트형태로 받아온 뒤 div태그에 이 값을 innerHTML로 넣어준다.
+				}
+			}
+		}
+	</script>
+
+</head>
+<body>
+	일반 텍스 파일 실습입니다.<br/>
+	<button onclick = "mySend()">파일 수신</button>
+	<div id="result"></div>
+
+</body>
+</html>

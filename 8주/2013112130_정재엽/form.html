@@ -1,0 +1,17 @@
+<html>
+<body>
+	<h1 align="center">Beer Selection Page</h1>  
+	<form method="POST" action="SelectBeer.do"> //POST형식으로 메세지를 보내며, 서블릿 매핑을 위하여 SelectBeer.do를 이용합니다.
+		Select beer characteristics
+			Color:
+			<select name="color" size="1"> // 파라미터를 통해 선택된 값을 서블릿으로 HttpRequest를 보냅니다.
+				<option value="light"> light </option>
+				<option value="amber"> amber </option>
+				<option value="brown"> brown </option>
+				<option value="dark"> dark </option>
+			</select>
+			<br><br>
+		<input type="submit">
+	</form>
+</body>
+</html>

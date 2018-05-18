@@ -1,0 +1,142 @@
+#container{
+ width:1350px;
+ margin:0px auto;
+ padding:20px;
+}
+
+#header{
+ padding:20px;
+ margin-bottom:20px;
+ border:1px solid #bcbcbc;
+}
+
+#content{
+ width:1000px;
+ height:1000px;
+ padding:20px;
+ margin-bottom:20px;
+ float:left;
+ border:1px solid #bcbcbc;
+}
+
+#content2{
+ width:1000px;
+ height:150px;
+ padding:20px;
+ margin-bottom:20px;
+ float:right;
+ border: 1px solid #bcbcbc;
+}
+
+#extraslidebar{
+ width:260px;
+ height:150px;
+ padding:20px;
+ margin-bottom:20px;
+ float:left;
+ border : 1px solid #bcbcbc;
+}
+
+#slidebar1{
+ width:260px;
+ height:150px;
+ padding:20px;
+ margin-bottom:20px;
+ float:right;
+ border:1px solid #bcbcbc;
+}
+
+
+#slidebar2{
+ width:260px;
+ height:788px;
+ padding:20px;
+ margin-bottom:20px;
+ float:right;
+ border:1px solid #bcbcbc;
+}
+
+#footer{
+ clear:both;
+ padding:20px;
+ border:1px solid #bcbcbc;
+}
+
+ul.h{
+ list-style-type: none;   /* ul 마커 제거 */
+ margin:0;
+ padding:0;
+ overflow: hidden;
+ background-color:AliceBlue;
+}
+
+
+
+
+li.h{
+ float:left;
+ solid #bbb;
+}
+
+li.h a.h{
+ display : block;
+ color:black;
+ text-align:center;
+ padding: 14px 16px;
+ text-decoration : none;
+}
+
+
+
+
+li.h a.h : hover:not(.active){background-color : Gold; }
+.active{background-color : fuchsia;}
+
+a{text-decoration:none}
+a.slink:link{color:black;}
+a.slink:visited{color:blue;}
+a.slink:active{color:yellow;}
+a.slink:hover{color:red;}
+
+@media (max-width: 550px) {
+  #container {
+    width: auto;
+    position : relative;
+  }
+
+  #extraslidebar {
+    float : none;
+    width : auto;
+  }
+
+  #footer {
+    width: auto;
+    height: auto;
+  }
+
+  #content2 {
+    float : none;
+    width: auto;
+    height:auto;
+    margin-bottom:-20px;
+  }
+
+  ul li.h {
+    display:block;
+    width:500px;
+    height:60px;
+    line-height:30px;
+    text-decoration:none;
+    text-align:center;
+  }
+
+  
+    
+
+ 
+
+    #flex { display: flex; flex-direction: column; }
+    #a { order: 1; }
+    #b { order: 2; }
+}
+

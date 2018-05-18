@@ -1,0 +1,66 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>과제3번</title>
+<style>
+.droptarget {
+    float: center; 
+    width: 500px; 
+    height: 200px;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+
+</style>
+</head>
+<body>
+
+<p><h3>과일목록</h3></p>
+
+<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <img src="apple.jpg" ondragstart="dragStart(event)" ondragend="dragEnd1(event)" draggable="true" id="dragtarget1" width=150px height=150px value="apple">
+
+  <img src="grape.jpg" ondragstart="dragStart(event)" ondragend="dragEnd2(event)" draggable="true" id="dragtarget" width=150px height=150px value="grape">
+  
+  <img src="cherry.jpg" ondragstart="dragStart(event)" ondragend="dragEnd3(event)" draggable="true" id="dragtarget2" width=150px height=150px value="cherry">
+</div>
+<p><h3>장바구니</h3></p>
+<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+
+<p><h3 id="demo"><h3></p>
+
+<script>
+function dragStart(event) {
+    event.dataTransfer.setData("Text", event.target.id);
+}
+
+function dragEnd1(event) {
+    document.getElementById("demo").innerHTML = "사과를 옮겼습니다.";
+}
+
+function dragEnd2(event) {
+    document.getElementById("demo").innerHTML = "포도를 옮겼습니다.";
+}
+
+function dragEnd3(event) {
+    document.getElementById("demo").innerHTML = "체리를 옮겼습니다.";
+}
+
+function allowDrop(event) {
+    event.preventDefault();
+    wpevent.target.appendChild(document.getElementById(item));
+    wpevent.sopPropagation();
+}
+
+function drop(event) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("Text");
+    event.target.appendChild(document.getElementById(data));
+}
+</script>
+
+</body>
+</html>

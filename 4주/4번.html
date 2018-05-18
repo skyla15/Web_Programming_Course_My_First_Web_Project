@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>4번 문제</title>
+</head>
+<body>
+	<h4> 학생명단 </h4>
+
+
+	<script>
+		var s = '[' +
+		'{"name":"Hong", "age":"21"},' +
+		'{"name":"Kim", "age":"21"},' +
+		'{"name":"Kang", "age":"21"},' +
+		'{"name":"Han", "age":"21"},' +
+		'{"name":"Jang", "age":"21"}'+']';
+
+		var students = eval("(" + s + ")");
+
+		for(var i = 0 ; i < 5  ; i++ ){		
+		document.write("<p ><span style=\"background-color:yellow;\">" + "이름 : <span>" + students[i].name + "</span>" +"&nbsp;&nbsp;" + "나이 : <span>" + students[i].age + "</span>" + "<br></span></p>");
+		}
+	</script>
+</body>
+</html>

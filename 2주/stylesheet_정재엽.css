@@ -1,0 +1,112 @@
+#container{
+ width:1350px;
+ margin:0px auto;
+ padding:20px;
+}
+
+#nav{
+ height : 40px;
+ width: 100%;
+ position:relative;
+}
+
+#header{
+ padding:20px;
+ margin-bottom:20px;
+ border:1px solid #bcbcbc;
+}
+
+#content{
+ width:1000px;
+ height:1000px;
+ padding:20px;
+ margin-bottom:20px;
+ float:left;
+ border:1px solid #bcbcbc;
+}
+
+#content2{
+ width:1000px;
+ height:150px;
+ padding:20px;
+ margin-bottom:20px;
+ float:right;
+ border: 1px solid #bcbcbc;
+}
+
+#extraslidebar{
+ width:260px;
+ height:150px;
+ padding:20px;
+ margin-bottom:20px;
+ float:left;
+ border : 1px solid #bcbcbc;
+}
+
+#slidebar1{
+ width:260px;
+ height:150px;
+ padding:20px;
+ margin-bottom:20px;
+ float:right;
+ border:1px solid #bcbcbc;
+}
+
+
+#slidebar2{
+ width:260px;
+ height:788px;
+ padding:20px;
+ margin-bottom:20px;
+ float:right;
+ border:1px solid #bcbcbc;
+}
+
+#footer{
+ clear:both;
+ padding:20px;
+ border:1px solid #bcbcbc;
+}
+
+ul.h{
+ list-style-type: none;
+ margin:0;
+ padding:0;
+ overflow: hidden;
+ background-color:AliceBlue;
+}
+
+
+
+
+li.h{
+ float:left;
+ solid #bbb;
+}
+
+li.h a.h{
+ display : block;
+ color:black;
+ text-align:center;
+ padding: 14px 16px;
+ text-decoration : none;
+}
+
+
+
+
+li.h a.h : hover:not(.active){background-color : gold; }
+.active{background-color : fuchsia;}
+
+a{text-decoration:none}
+a.slink:link{color:black;}
+a.slink:visited{color:blue;}
+a.slink:active{color:yellow;}
+a.slink:hover{color:red;}
+
+
+
+
+}
+
+

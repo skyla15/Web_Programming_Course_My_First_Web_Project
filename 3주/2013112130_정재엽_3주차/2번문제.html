@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>과제2번</title>
+	<script>
+
+	var k = 0;
+
+	function handleClick(){
+		var found = null;
+		for(var j = 1 ; j < 4 ; j++){
+			var handler = document.getElementsByName("group"+j);
+				for(var i = 0 ; i < 4 ; i++)
+					{
+						found = handler[i].value;
+
+						if(handler[i].checked==true && found == "correct1")
+						{ 
+						  k=k+1;
+					      //alert(found+k+"바퀴");, 제대로 돌고 있는 지 확인하기 위한 alert.
+		         		}
+			            else if(handler[i].checked==true && found == "correct2" )
+		        		{
+						  k=k+1;
+						  //alert(found+k+"바퀴");
+			 			}
+			 			else if(handler[i].checked==true && found == "correct3")
+		        		{
+						  k=k+1;
+						  //alert(found+k+"바퀴");
+			 			} 			 					 		
+					
+					}
+						
+		}
+		//alert(k+"e");
+		document.getElementById("myMeter").value = k;
+		
+	} // 문제만들기
+
+
+	function reset(){
+		k = 0;
+		document.getElementById("myMeter").value = 0;
+		for(var j = 1 ; j < 4 ; j++){
+			var handler = document.getElementsByName("group"+j);
+				for(var i = 0 ; i < 4 ; i++)
+					{
+					
+						handler[i].checked=false;
+
+					}
+		}
+	} // 리셋함수
+
+
+
+
+
+
+  </script>
+
+</head>    
+
+<body>
+
+<ol>
+	<li><p>브라우저에게 문서의 유형을 알려주는것으로, HTML5의 문서 유형을 선언하는 HTML태그는?</p>
+	<input type="radio" name="group1" value="wrong">!HTML5
+	<input type="radio" name="group1" value="correct1">!DOCTYPE
+	<input type="radio" name="group1" value="wrong">!DOCTYPE5
+	<input type="radio" name="group1" value="wrong">!HTML-DOCTYPE
+	</li>
+	<p/>
+
+	<li><p> input태그의 속성 중 입력 요소에 힌트를 미리 표시하는 속성은?</p>
+	<input type="radio" name="group2" value="wrong"> autocomplete
+	<input type="radio" name="group2" value="wrong"> autofocus
+    <input type="radio" name="group2" value="wrong"> pattern
+	<input type="radio" name="group2" value="correct2"> placeholder
+	</li><p/>
+
+	<li><p>input 태그의 타입 중 details태그와 함께 사용하기도 하며, 주로 세부사항의 요약을 표시하는 태그는?</p>
+	<input type="radio" name="group3" value="correct3"> summary
+	<input type="radio" name="group3" value="wrong"> fieldset
+	<input type="radio" name="group3" value="wrong"> legend
+	<input type="radio" name="group3" value="wrong"> meter
+	</li>	
+	<p/>
+</ol>
+
+	<input type="submit" onclick="handleClick()" value="submit">
+	<input type="reset" onclick="reset()" value="reset">
+
+
+	<meter id="myMeter" min="0" max="3" value""></meter>
+
+</body>
+<html>

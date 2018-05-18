@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title> title </title>
+	<script type ="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jqeuery.js"></script>
+	<script type="text/javascript">
+	$(function(){
+	$("#searchButton").click(function(){   
+		//버튼이 눌렸을 때 실행하는 함수
+		var flag = $("#resultSelect").val();
+		//selec 태그의 값에 따라 list1 제이슨을 불러올 지 json2를 불러올지 결정함.
+		if(flag == "Y"){
+			url = "/list1.json";
+		} 
+		else{
+			url = "/list2.json";
+		}
+		//제이슨 파싱.
+		//data:제이슨의 내용을 가져온 뒤 각각의 플레그에 따른 내용을 div태그에 입력한다.
+		$.ajax(
+			{	url : url,
+				dataType : 'json',
+				succecss : function(data){
+					if(data.flag =="Y"){
+						var result = data.data;
+					}
+					else{
+						var result = data.data;
+					}
+					$("#listLayout").html(data.data);
+				    }
+				});
+		})
+	})
+</script>
+</head>
+
+
+<body>
+
+	<select id="resultSelect">
+	<option value = "Y">성공 JSON</option>
+	<option value = "N">실패 JSON</option>
+	</select>
+	<input type="button" id="searchButton" value="조회"/><br/>
+	<div id="listLayout"></div>
+
+
+</body>
+</html>
